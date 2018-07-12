@@ -1,210 +1,250 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Oslo Theme">
-	<meta name="author" content="Carlos Alvarez - Alvarez.is - blacktie.co">
-	<link rel="shortcut icon" href="assets/ico/favicon.png">
-
-	<title>Robert Harry</title>
-
-	<!-- Bootstrap 3.0.2 CSS -->
-	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Custom CSS -->
-	<link href="https://rawgit.com/ItsOkayItsOfficial/project3/app/client/public/assets/templates/oslo/assets/css/style.css" rel="stylesheet">
-
-	<!-- Font Awesome 4.0.3 -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-	<!-- FancyBox 2.1.5 -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" />
-	<!-- jQuery 1.10.2 -->
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<!-- Chart.js 1.0.1 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
-  
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width" , initial-scale=1”>
+    <title>PTSD App</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Graduate" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
 </head>
 
-<body data-spy="scroll" data-offset="0" data-target="#theMenu">
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-	<!-- Menu -->
-	<nav class="menu" id="theMenu">
-		<div class="menu-wrap">
-			<h1 class="logo">
-				<a href="index.html#home">Robert Harry</a>
-			</h1>
-			<i class="fa fa-times menu-close"></i>
-			<a href="#home" class="nav-link">Home</a>
-			<a href="#about" class="nav-link">About</a>
-			<a href="#portfolio" class="nav-link">Portfolio</a>
-			<a href="#skills" class='nav-link'>Skills</a>
-			<a href="#contact" class="nav-link">Contact</a>
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <img src="assets/images/america-fingerprint.png">
+                    <h1>PTSD App</h1>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-			<a target='_blank' href="https://www.linkedin.com/in/robert-harry-35a482161/">
-				<i class="fa fa-linkedin"></i>
-			</a>
-			<a target='_blank' href="https://github.com/NordicCodingRob">
-				<i class="fa fa-github"></i>
-			</a>
-			<a target='_top' href="mailto:rsh2625@gmail.com">
-				<i class="fa fa-envelope"></i>
-			</a>
-		</div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="ptsd.html">What is PTSD?
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="resources.html">Get Help
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
 
-		<!-- Menu button -->
-		<div id="menuToggle">
-			<i class="fa fa-bars"></i>
-		</div>
-	</nav>
+                </ul>
 
-	<section id="home" name="home"></section>
-	<div id="headerwrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-          <h1>Robert Harry</h1>
-					<h2 style='font-size:24px; color:white;text-shadow: 2px 2px black'><strong>FREELANCE DEVELOPMENT CONSULTANT | rsh2625@gmail.com</strong></h2>
-				</div>
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</div>
-	<!-- /headerwrap -->
+            </div>
 
-	<section id="about" name="about"></section>
-	<div id="aboutwrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 name">
-					<img class="img-responsive" src="https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/18268522_1438275356225287_774921771961841936_n.jpg?_nc_cat=0&oh=03b9c3f15a81b01a6eaa019c86433584&oe=5BB00185">
-					<p>Robert Harry</p>
-					<div class="name-label"></div>
-				</div>
-				<!-- /col-lg-4-->
-				<div class="col-lg-8 name-desc">
-					<h2>Freelance Development Consultant</h2>
-					<div class="name-zig"></div>
-
-					<div class="col-md-12">
-						<p>I am a MERN full stack developer who takes a particular interest in cutting-edge backend development and sharp beautiful ReactJS frontend development. </p>
-					</div>
-
-				</div>
-				<!-- /col-lg-8-->
-
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</div>
-	<!-- /aboutwrap -->
-
-	<!-- ABOUT SEPARATOR -->
-	<div class="sep about" data-stellar-background-ratio="0.5"></div>
-
-	<!-- PORTFOLIO SECTION -->
-	<section id="portfolio" name="portfolio"></section>
-	<div id="portfoliowrap" style='text-align:center'>
+        </nav>
+    </header>
+    <div class="hotline">
+        <p>If you need help now, call 1-800-273-8255.</p>
+    </div>
     <div class="container">
-			<h1>SOME OF MY LATEST WORKS</h1>
-			
-		</div>
-		<!-- /container -->
-	</div>
-	<!-- /Portfoliowrap -->
+        <div class="row">
+        <div class = "col-sm-12" id="user-agreement">
+            <!--Put Google Authentication Start here, when authentication is finished, you just need to 
+            show "#assessment-content" and hide this div (and have the opposite configuration on start)-->
+        </div>
+        </div>
+        <div id="assessment-content">
+            <div class="row">
+                <div class="col-sm-12 mission">
+                    <h3>We're here to help.</h3>
+                    <p>The assessment below does not diagnose or indicate the diagnosis of PTSD. Instead, it analyzes information to help veterans 
+                        and their loved ones know when to start important conversations about PTSD. If you are concerned, that you or someone you 
+                        know has PTSD, you should reach out to a professional.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 col-sm-12" id="assessment-column">
+                    <div class="accordion" id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" id="headerbutton" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <h3>Required: Assessment Questionnaire</h3>
+                                    </button>
+                                </h5>
+                            </div>
+                            <!--<button onCLick="killAria()" id ="p2" aria-expanded= "false">Kill</button>-->
 
-	<!-- PORTFOLIO SEPARATOR -->
-	<div class="sep portfolio" data-stellar-background-ratio="0.5"></div>
+                            
+                            <!--use collapseOne id and change the show class to hide, plus in the button above, change aria-expanded to false, the function will
+                            need ifs or whatever you decide to do for every section of the accordion-->
 
 
-	<!-- SERVICE SECTION -->
-	<section id="skills" name="skills"></section>
-	<div id="servicewrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8-offset-2 centered">
-					<h1>AN OVERVIEW OF MY SKILLS</h1>
-					<h3>I'll do all the work for you</h3>
-				</div>
-				<!-- /col-lg-8 -->
-			</div>
-			<!-- /row -->
-      
-		</div>
-		<!-- /container -->
-	</div>
-	<!-- /servicewrap -->
+                            <!-- Change class from "collapse show step-one to collapse"     -->
+                            <div id="collapseOne" class="collapse-show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-12" id="assessment-div">
+                                            <p id="assessmentsq">Assessment</p>
 
-	<!-- SERVICE SECTION -->
-	<section id="contact" name="contact"></section>
-	<!-- CONTACT SEPARATOR -->
-	<div class="sep contact" data-stellar-background-ratio="0.5"></div>
+                                            <button id="assessmentstart">Start</button>
+                                            <button id="yes">Yes</button>
+                                            <button id="no">No</button>
+                                            <button id="resetbutton">Start Again</button>
+                                            
 
-	<div id="contactwrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
+                                        </div>
 
-					<p>
-						<small>941 Hesters Crossing Road, APT 2704, Austin, Texas 78681.
-						</small>
-					</p>
-					<p>
-						<small>5124008071
-							<br/> Mail. rsh2625@gmail.com
-					</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" id="headerbutton" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        <h3>Required: Behavior Description</h3>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse step-two" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-12" id="description-input-div">
+                                            <form>
+                                                <label>In your own words, describe the behaviors or situations that have been concerning
+                                                    since the traumatic event.</label>
+                                                <input type="text" id="behavior-description" required>
+                                                <input type="submit" name="submittext" id="submit-text">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" id="headerbutton" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <h3>Optional: Upload Images</h3>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse step-three" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-12" id="image-uploads-div">
+                                            <input id="URLInput" type="text" placeholder="Copy and paste image URL here">
+                                            <input id="imgSub" type="submit" value="Submit">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" id="headerbutton" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        <h3>Optional: Text</h3>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse step-four" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-12" id="text-paste-div">
+                                            <label>Optional: Copy and paste content from social media messages, emails, or text
+                                                messages from the person you are concerned about, with their permission.
+                                                This content is disposed of within 2 hours of upload.
+                                            </label>
+                                            <input type="text" id="pasted-text">
+                                            <input type="submit" name="submitpastedtext" id="submit-pasted-text">
 
-				</div>
-			</div>
-			<!--/row -->
-		</div>
-		<!-- /container -->
-	</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-	<!-- jQuery 1.11.0 -->
-	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<!-- Classie 1.0.1 -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
-	<!-- Bootstrap 3.0.2 -->
-	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 
-	<!-- StellerJS 0.6.2 -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
-	<!-- FancyBox JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-	<!-- DOM Script -->
-	<script>
-		$(function () {
-			$.stellar({
-				horizontalScrolling: false,
-				verticalOffset: 40
-			});
-    });
-    $('.nav-link, .nav-logo').on('click', function (event) {
-      event.preventDefault()
-      $('html, body').animate(
-        {scrollTop: $(this.hash).offset().top},
-        {duration: 1000, easing: 'swing'}
-      );
-    });
-  (function(){
-        // Menu settings
-        $('#menuToggle, .menu-close').on('click', function(){
-          $('#menuToggle').toggleClass('active');
-          $('body').toggleClass('body-push-toleft');
-          $('#theMenu').toggleClass('menu-open');
-        });
-  })(jQuery)
-	</script>
-	<!-- DOM Script -->
-	<script type="text/javascript">
-		$(function () {
-			//    fancybox
-			jQuery(".fancybox").fancybox();
-		});
-	</script>
+
+                    <div class="row">
+                        <div class="col-sm-12" id="results-button-div">
+                            <a href="#">
+                                <!-- Disable -->
+                                <button id="fullresult">
+                                    View Full Results
+                                </button>
+                            </a>
+                            <p>
+                                <small>*This button will not be activated until you have completed all required steps.</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12" id="results-preview">
+                    <div id="previewcontent">
+
+                        <h3>Results Preview</h3>
+                        <p>
+                            <small>*press "View Full Results" for detailed results after completing all required assessment steps.</small>
+                        </p>
+                    </div>
+                    <div class= "center bold" id="advise">
+
+                        </div>
+                    <div>
+                        <div class="result-graph">
+                        <p class = "center">Questionnaire Results</p>
+                        <canvas id="assessment-result-graph" class="graph"></canvas>
+                        </div> 
+                        <div class="result-graph">
+                                <p class = "center">Description Results</p>
+                        <canvas id="description-result-graph" class="graph"></canvas>
+                        </div>
+                        <div class="result-graph">
+                                <p class = "center">Image Analysis Results</p>
+                        <canvas id="image-analysis-graph" class="graph"></canvas>
+                        </div>
+                        <div class="result-graph">
+                                <p class = "center">Text Results</p>
+                        <canvas id="text-analysis-graph" class="graph"></canvas>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
 
 </body>
 
